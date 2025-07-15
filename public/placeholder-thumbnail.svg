@@ -1,0 +1,7 @@
+<!-- This would be a placeholder SVG for video thumbnails -->
+<svg width="320" height="180" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="320" height="180" fill="#F3F4F6"/>
+  <circle cx="160" cy="90" r="30" fill="#9CA3AF"/>
+  <polygon points="150,75 150,105 175,90" fill="#FFFFFF"/>
+  <text x="160" y="130" text-anchor="middle" fill="#6B7280" font-family="Arial, sans-serif" font-size="12">Video Thumbnail</text>
+</svg>
