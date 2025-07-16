@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { connectDB } from '@/lib/mongodb';
-import { Video } from '@/models/Video';
+import { mockVideos } from '@/lib/mockData';
 import { verifyToken } from '@/lib/auth';
 
 export async function POST(
@@ -8,8 +7,6 @@ export async function POST(
   { params }: { params: { id: string } }
 ) {
   try {
-    await connectDB();
-    
     const token = request.headers.get('authorization')?.replace('Bearer ', '');
     if (!token) {
       return NextResponse.json(
@@ -26,7 +23,7 @@ export async function POST(
       );
     }
 
-    const video = await Video.findById(params.id);
+    const video = mockVideos.find(v => v._id === params.id);
     if (!video) {
       return NextResponse.json(
         { error: 'Video not found' },
@@ -53,8 +50,6 @@ export async function POST(
         video.likes = Math.max(0, video.likes - 1);
       }
     }
-
-    await video.save();
 
     return NextResponse.json({
       message: hasDisliked ? 'Dislike removed' : 'Video disliked',

@@ -7,8 +7,8 @@ export const mockUsers = [
     displayName: 'Test User',
     password: '$2b$12$LKnJ1LmGpB2I1Dsu3XRPlu7RqfeXB6gNusea4fwZsteYzpB1A6RWS', // password123
     avatar: null,
-    subscribers: [],
-    subscriptions: [],
+    subscribers: [] as string[],
+    subscriptions: [] as string[],
     subscribersCount: 0,
     createdAt: '2024-01-01T00:00:00.000Z'
   },
@@ -19,8 +19,8 @@ export const mockUsers = [
     displayName: 'John Doe',
     password: '$2b$12$LKnJ1LmGpB2I1Dsu3XRPlu7RqfeXB6gNusea4fwZsteYzpB1A6RWS', // password123
     avatar: null,
-    subscribers: [],
-    subscriptions: [],
+    subscribers: [] as string[],
+    subscriptions: [] as string[],
     subscribersCount: 0,
     createdAt: '2024-01-01T00:00:00.000Z'
   }
@@ -38,8 +38,8 @@ export const mockVideos = [
     views: 1250,
     likes: 42,
     dislikes: 2,
-    likedBy: [],
-    dislikedBy: [],
+    likedBy: [] as string[],
+    dislikedBy: [] as string[],
     duration: 180,
     isPublic: true,
     createdAt: '2024-01-02T00:00:00.000Z'
@@ -55,8 +55,8 @@ export const mockVideos = [
     views: 823,
     likes: 31,
     dislikes: 1,
-    likedBy: [],
-    dislikedBy: [],
+    likedBy: [] as string[],
+    dislikedBy: [] as string[],
     duration: 240,
     isPublic: true,
     createdAt: '2024-01-03T00:00:00.000Z'
@@ -72,8 +72,8 @@ export const mockVideos = [
     views: 567,
     likes: 28,
     dislikes: 0,
-    likedBy: [],
-    dislikedBy: [],
+    likedBy: [] as string[],
+    dislikedBy: [] as string[],
     duration: 195,
     isPublic: true,
     createdAt: '2024-01-04T00:00:00.000Z'
