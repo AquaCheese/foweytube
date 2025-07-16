@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { mockVideos, mockUsers } from '@/lib/mockData';
 
+export const dynamic = 'force-static';
+
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
